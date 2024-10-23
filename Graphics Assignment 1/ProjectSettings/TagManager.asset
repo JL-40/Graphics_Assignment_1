@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerUnit
+  - EnemyUnit
+  - Pickup
+  - Unit
   layers:
   - Default
   - TransparentFX
@@ -11,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - PlayerChar
+  - EnemyChar
   - 
   - 
   - 
