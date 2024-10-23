@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _USEAMBIANT_ON
+  - _USESPECULAR_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -79,7 +80,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _UseAmbiant: 1
-    - _UseSpecular: 0
+    - _UseSpecular: 1
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.5749002, g: 0.9433962, b: 0.50284797, a: 1}
