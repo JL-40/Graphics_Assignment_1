@@ -6,8 +6,13 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 638652986925996167
     m_Hash: 285241849
+=======
+      ticks: 638652454080000000
+    m_Hash: 2226451218
+>>>>>>> Stashed changes
   m_LockFileStatus:
     m_FilePath: C:/Users/Jegg/Documents/GitHub/Graphics_Assignment_1/Graphics Assignment
       1/Packages/packages-lock.json
@@ -15,8 +20,13 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 638652986926006130
     m_Hash: 1212952352
+=======
+      ticks: 638652454080000000
+    m_Hash: 1636506719
+>>>>>>> Stashed changes
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

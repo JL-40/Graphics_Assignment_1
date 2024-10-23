@@ -12,7 +12,13 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
+<<<<<<<< Updated upstream:Graphics Assignment 1/Assets/AurynSky/Gems Ultimate Pack/Models/Materials/Material.mat
   m_InvalidKeywords: []
+========
+  m_InvalidKeywords:
+  - _USEAMBIANT_ON
+  - _USESPECULAR_ON
+>>>>>>>> Stashed changes:Graphics Assignment 1/Assets/Graphics/Materials/TestMaterial1 1.mat
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -76,6 +82,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+<<<<<<<< Updated upstream:Graphics Assignment 1/Assets/AurynSky/Gems Ultimate Pack/Models/Materials/Material.mat
+========
+    - _UseAmbiant: 1
+    - _UseSpecular: 1
+>>>>>>>> Stashed changes:Graphics Assignment 1/Assets/Graphics/Materials/TestMaterial1 1.mat
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
