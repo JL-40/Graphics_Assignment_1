@@ -107,7 +107,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.6
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -179,6 +179,7 @@ MonoBehaviour:
   player: {fileID: 0}
   pickupholder: {fileID: 0}
   mat: {fileID: 4302186975172323743}
+  ls: {fileID: 0}
 --- !u!1 &4067252400001759152
 GameObject:
   m_ObjectHideFlags: 0

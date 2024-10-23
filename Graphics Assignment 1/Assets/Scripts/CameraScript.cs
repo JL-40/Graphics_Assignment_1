@@ -10,7 +10,6 @@ public class CameraScript : MonoBehaviour
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Debug.Log("OnRenderImage called");
         Graphics.Blit(source, destination, m_renderMaterial);
     }
 }
