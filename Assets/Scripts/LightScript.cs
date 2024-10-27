@@ -13,6 +13,10 @@ public class LightScript : MonoBehaviour
 
     public CameraScript cs;
 
+    // NEW
+    public Material DaySkyBox;
+    public Material NightSkyBox;
+
     // Update is called once per frame
     void Update()
     {
@@ -25,10 +29,12 @@ public class LightScript : MonoBehaviour
         if (transform.eulerAngles.x > 180)
         {
             cs.m_renderMaterial = Night;
+            RenderSettings.skybox = NightSkyBox; // NEW
         }
         else
         {
             cs.m_renderMaterial = Default;
+            RenderSettings.skybox = DaySkyBox; // NEW
         }
 
     }
