@@ -6,17 +6,18 @@ Shader "Sorcery/MainShadeWorld"{
         [MaterialToggle] _UseAmbiant ("Use Ambience", float) = 0
 
         [MaterialToggle] _UseSpecular ("Use Specular", float) = 0
-        _SpecColor("Color", Color) = (1.0,1.0,1.0)
-        _Shininess("Shininess", Range(0.1, 100)) = 10
+        _SpecColor("Specular Color", Color) = (1.0,1.0,1.0) // MODIFIED
+        _Shininess("Shininess", Range(0.0, 100)) = 10 // MODIFIED
 
         
 
     }
     SubShader {
-
         Pass{
-			Tags {"LightMode" = "ForwardBase"}
+			Tags {"LightMode" = "ForwardBase" "RenderType" = "Opaque"} // MODIFIED
+
 			CGPROGRAM
+
 			#pragma vertex vert
 			#pragma fragment frag
 
@@ -63,20 +64,17 @@ Shader "Sorcery/MainShadeWorld"{
 			vertexOutput vert(vertexInput v) {
                 vertexOutput o;
 
-                
                 float3 normalDirection = normalize(mul(float4(v.normal,0.0),unity_WorldToObject).xyz);
 
 
-                float3 lightDirection;
+                float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz); // MODIFIED
                 float atten = 1.0;
 
-                lightDirection = normalize(_WorldSpaceLightPos0.xyz);
-
-                float3 diffuseReflection = atten * _LightColor0.xyz * (_UseAmbiant ? 1.0 : _Color.rgb) * max(0.0,dot(normalDirection, lightDirection));
+                float3 diffuseReflection = atten * _LightColor0.xyz * (_UseAmbiant ? 1.0 : _Color.rgb) * max(0.0,dot(normalDirection, lightDirection)); // MODIFIED
 
                 if (_UseAmbiant)
                 {
-                    float3 diffuseReflection = atten * _LightColor0.xyz*max(0.0,dot(normalDirection, lightDirection));
+                    //float3 diffuseReflection = atten * _LightColor0.xyz*max(0.0,dot(normalDirection, lightDirection)); // MODIFIED
 
                     float3 lightFinal = diffuseReflection + UNITY_LIGHTMODEL_AMBIENT.xyz;
 
@@ -86,7 +84,7 @@ Shader "Sorcery/MainShadeWorld"{
                 {
                     o.col = float4(diffuseReflection, 1.0);
                 }
-                //o.pos = UnityObjectToClipPos(v.vertex);
+                //o.pos = UnityObjectToClipPos(v.vertex); // MODIFIED
 
                 if (_UseSpecular)
                 {
@@ -94,7 +92,7 @@ Shader "Sorcery/MainShadeWorld"{
                     o.normalDir = normalize(mul(float4(v.normal, 0.0), unity_WorldToObject));
                     
                 }
-                o.pos = UnityObjectToClipPos(v.vertex);
+                o.pos = UnityObjectToClipPos(v.vertex); // MODIFIED
                 return o;
 			}
 
@@ -129,12 +127,8 @@ Shader "Sorcery/MainShadeWorld"{
                 }
 
 			}
-
-            
-
-
-
 			ENDCG
+        }
     }
-}
+    FallBack "Diffuse"
 }

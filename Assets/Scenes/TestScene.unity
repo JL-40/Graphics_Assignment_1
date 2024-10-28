@@ -1318,7 +1318,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1522e45e0d58724a91f3f597ec14198, type: 2}
+  - {fileID: 2100000, guid: beaabf118c9017f4eb65d98d50517de1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2120,7 +2120,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 26.9, z: 0}
+  m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2144,6 +2144,8 @@ MonoBehaviour:
   Dead: {fileID: 2100000, guid: 6000c7a62c96c1d459b0078ca673bf78, type: 2}
   cs: {fileID: 963194229}
   DaySkyBox: {fileID: 2100000, guid: 7416536dbe0334cfd888dd1beb75a9fb, type: 2}
+  SunsetSkyBox: {fileID: 2100000, guid: 2d796ced94d61438fbab81b194038162, type: 2}
+  DuskSkyBox: {fileID: 2100000, guid: b4f152e0498484391a9f0d5a1facf03b, type: 2}
   NightSkyBox: {fileID: 2100000, guid: 9af23ba5fa5364ff598888460e0e2759, type: 2}
 --- !u!1 &818721056
 GameObject:
@@ -2717,7 +2719,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_renderMaterial: {fileID: 2100000, guid: 8994e052b43717e4886384e72a204242, type: 2}
-  l_skybox: {fileID: 0}
 --- !u!1 &990173692
 GameObject:
   m_ObjectHideFlags: 0
