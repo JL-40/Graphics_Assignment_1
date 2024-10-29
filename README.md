@@ -17,11 +17,11 @@ The crystal powerups are split into two parts, the spawning of them and the inte
 The player character moves around by navigating to the point the player clicked on using a NavMesh. After interacting the with crystal, the player will play an attacking animation and start to glow from the rim lighting, inwhich the player must then move towards the enemy and collide with it which will defeat the enemy. Alternatively, if enemy is glowing, the player must move away from it until they can get a powerup crystal to defeat the enemy.
 
 ### Illuminatioin
-#### Diffuse Lighting
-
+#### Diffuse Lighting, Diffuse Lighting with Ambient, and Simple Specular
+I have combined these three together since they are part of a single shaderlab script. The overall code has not changed from the slide code when seperated from each other, however, we had to add some modifications to get these three implementations to work together and work with the following deliverable, toggling. First of all we added toggled for both ambient and specular so that we can isolate each for the toggling portion, as well as, code to handle rendering for having both, one or the other, or neither ambient or specular enabled and we used Diffuse lighting to combine them all together. During this process we also merged the shaders together for this function to work.
 
 #### Ambient/Specular Toggle
-
+The toggling for each setting; No Lighting, Ambient Only, Specular Only, Ambient + Specular, and Ambinent + Specular + Custom Effect/Shader, are implemented using a C# script to change the values of shaderlab variables and/or materal the object will use. Each object that is affected will have a C# script that allows for an "Illumination Manager" to tell every object to what toggle should happen when a key is pressed. This is the simplests way we can implement it, however, it is by far not the best or most elegant, it just works and works well enough.
 
 #### Toon Ramp
 There are no changes to the toom ramp shaderlab script. It is taken from the class slides.
