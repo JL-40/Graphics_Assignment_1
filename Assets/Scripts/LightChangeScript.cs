@@ -14,7 +14,7 @@ public class LightChangeScript : MonoBehaviour
     {
         foreach (Transform child in TileOwner)
         {
-            child.Translate(new Vector3(0, Random.Range(0.0f, 0.5f), 0));
+            child.position = (new Vector3(child.position.x, child.position.y + Random.Range(0.0f, 2.5f),child.position.z));
             Objects.Add(child.GetComponent<MaterialChanger>());
 
         }
