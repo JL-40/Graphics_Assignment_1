@@ -43,6 +43,8 @@ The rim lighting was modified by adding the ability to change and apply colors a
 The crystal modified its own transpaency by setting the value of its shader variable to the C# variable call ```Opacity```. By modifying the shader variable directly, we can dynamically change the transparency of the crystal, which creates a fade-in-fade-out effect that makes the crystal a bit more noticable and also plays with the psychology of the player as we have been conditioned to understand that a blinking object is important, either as part of the game or as a visual indicator of the object potentially disappearing.
 
 ## Third-Party Resources and Credits
+The following third-party resources were used to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives or looking at a flat color skybox. 
+
 - Tower and tree models by LowPolyBoy. [(FREE) Low Poly Game Assets](https://sketchfab.com/3d-models/free-low-poly-game-assets-bbbfbeccfc9047b8b3f15b1c90061cdf)
 - Player model and animations by Dungeon Mason. [RPG Hero PBR HP Polyart](https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/rpg-hero-pbr-hp-polyart-121480)
 - Powerup gem model by AurnySky. [Simple Gems Ultimate Animated Customizable Pack](https://assetstore.unity.com/packages/3d/props/simple-gems-ultimate-animated-customizable-pack-73764)
