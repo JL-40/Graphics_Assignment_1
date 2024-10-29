@@ -40,6 +40,7 @@ The LUT of dying is a greyscaled version of the neutral LUT, which is also dynam
 The rim lighting, as mentioned in the [Base Game](#Base-Game) section, the rim lighting is used to show if the player or enemy has obtained the powerup crystal and is able to kill. The rim lighting was modified by adding the ability to change and apply colors and textures respectively. This allows us to have fully textured objects such as the player and give it rim lighting which the class code did not have, which makes the object affected give a visual indicator.
 
 The screenshot below shows the rim lighting with the texture applied to the player character from [RPG Hero PBR HP Polyart](#Third-Party-Resources-and-Credits).
+
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Rim_Lighting.gif?raw=true)
 
 #### Tranparency
