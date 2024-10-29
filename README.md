@@ -7,16 +7,16 @@ The game is a top-down, point-and-click style game that takes minor inspiration 
 The screenshot below shows the gameplay mid-progress.
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Gameplay_Screenshot.jpg?raw=true)
 
-#### Enemy AI
-The enemy AI uses a NavMesh to move around obstacles such as trees and towers. While using the NavMesh, the enemy is also able to track the crystals and after colliding with it they will start to glow from the rim lighting and track the player
-
 #### Crystal Powerups
 The crystal powerups are split into two parts, the spawning of them and the interaction of them. The spawner simply creates a new crystal witin a set bound (hard coded) at set intervals. After the crystals are spawned, the crystal will modify its transparency to make it seem to fade in and out. Additionally, when the player or enemy interacts with the crystal (collides with it), it will delete itself and set the player or enemy to dangerous.
 
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Transparent_Crystal.gif?raw=true)
+#### Enemy AI & Player Character
+Both the player character and the enemy use a NavMesh to move around; the enemy uses the NavMesh to track to the powerup crystals and track the player character while the player character uses the NavMesh to move to the where the player has clicked to with their cursor.
 
-#### Player Character
-The player character moves around by navigating to the point the player clicked on using a NavMesh. After interacting the with crystal, the player will play an attacking animation and start to glow from the rim lighting, inwhich the player must then move towards the enemy and collide with it which will defeat the enemy. Alternatively, if enemy is glowing, the player must move away from it until they can get a powerup crystal to defeat the enemy.
+When both the player and the enemy AI must move to the crystal to gain a buff that allows them to kill each other. When either the player character or enemy collides with the crystal, it will set a boolean variable to true which adjusts their rim lighting to be more visible. For the player character, it will also change the animation to an attacking animation.
+
+The gif below shows the player and enemy gaining the buff while also showing the player defeating the enemy before dying.
+![alt text](?raw=true)
 
 ### Illuminatioin
 #### Diffuse Lighting, Diffuse Lighting with Ambient, and Simple Specular
@@ -43,6 +43,9 @@ The rim lighting was modified by adding the ability to change and apply colors a
 
 #### Tranparency
 The crystal modified its own transpaency by setting the value of its shader variable to the C# variable call ```Opacity```. By modifying the shader variable directly, we can dynamically change the transparency of the crystal, which creates a fade-in-fade-out effect that makes the crystal a bit more noticable and also plays with the psychology of the player as we have been conditioned to understand that a blinking object is important, either as part of the game or as a visual indicator of the object potentially disappearing.
+
+The gif below shows the crystal dynamically adjusting their tranparency of their material shader.
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Transparent_Crystal.gif?raw=true)
 
 ## Third-Party Resources and Credits
 The following third-party resources were used to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives or looking at a flat color skybox. 
