@@ -16,6 +16,7 @@ Both the player character and the enemy use a NavMesh to move around; the enemy 
 When both the player and the enemy AI must move to the crystal to gain a buff that allows them to kill each other. When either the player character or enemy collides with the crystal, it will set a boolean variable to true which adjusts their rim lighting to be more visible. For the player character, it will also change the animation to an attacking animation.
 
 The gif below shows the player and enemy gaining the buff while also showing the player defeating the enemy before dying.
+
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Player_VS_Enemy.gif?raw=true)
 
 ### Illuminatioin
