@@ -13,6 +13,8 @@ The enemy AI uses a NavMesh to move around obstacles such as trees and towers. W
 #### Crystal Powerups
 The crystal powerups are split into two parts, the spawning of them and the interaction of them. The spawner simply creates a new crystal witin a set bound (hard coded) at set intervals. After the crystals are spawned, the crystal will modify its transparency to make it seem to fade in and out. Additionally, when the player or enemy interacts with the crystal (collides with it), it will delete itself and set the player or enemy to dangerous.
 
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Transparent_Crystal.gif?raw=true)
+
 #### Player Character
 The player character moves around by navigating to the point the player clicked on using a NavMesh. After interacting the with crystal, the player will play an attacking animation and start to glow from the rim lighting, inwhich the player must then move towards the enemy and collide with it which will defeat the enemy. Alternatively, if enemy is glowing, the player must move away from it until they can get a powerup crystal to defeat the enemy.
 
