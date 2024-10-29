@@ -25,6 +25,8 @@ public class MaterialChanger : MonoBehaviour
 
     public void Setting1()
     {
+        render.material.SetFloat("_UseLambert", 1.0f);
+
         render.material.SetFloat("_UseAmbiant", 0.0f);
 
         render.material.SetFloat("_UseSpecular", 0.0f);
@@ -34,6 +36,8 @@ public class MaterialChanger : MonoBehaviour
 
     public void Setting2()
     {
+        render.material.SetFloat("_UseLambert", 1.0f);
+
         render.material.SetFloat("_UseAmbiant", 1.0f);
 
         render.material.SetFloat("_UseSpecular", 0.0f);
@@ -41,6 +45,9 @@ public class MaterialChanger : MonoBehaviour
 
     public void Setting3()
     {
+
+        render.material.SetFloat("_UseLambert", 0.0f);
+
         render.material.SetFloat("_UseAmbiant", 0.0f);
 
         render.material.SetFloat("_UseSpecular", 1.0f);
@@ -49,6 +56,8 @@ public class MaterialChanger : MonoBehaviour
 
     public void Setting4()
     {
+        render.material.SetFloat("_UseLambert", 1.0f);
+
         render.material.SetFloat("_UseAmbiant", 1.0f);
 
         render.material.SetFloat("_UseSpecular", 1.0f);
@@ -57,6 +66,8 @@ public class MaterialChanger : MonoBehaviour
 
     public void Setting5()
     {
+        render.material.SetFloat("_UseLambert", 1.0f);
+
         render.material.SetFloat("_UseAmbiant", 0.0f);
 
         render.material.SetFloat("_UseSpecular", 0.0f);

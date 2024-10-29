@@ -8,6 +8,19 @@ public class LightChangeScript : MonoBehaviour
 
     public List<MaterialChanger> Objects;
 
+    public Transform TileOwner;
+
+    void Start()
+    {
+        foreach (Transform child in TileOwner)
+        {
+            child.Translate(new Vector3(0, Random.Range(0.0f, 0.5f), 0));
+            Objects.Add(child.GetComponent<MaterialChanger>());
+
+        }
+    }
+
+
     // Update is called once per frame
     void Update()
     {
