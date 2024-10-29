@@ -37,9 +37,10 @@ The LUT of dying is a greyscaled version of the neutral LUT, which is also dynam
 
 ### Shaders and Effects
 #### Rim Lighting
-The rim lighting, as mentioned in the [Base Game](#Base-Game) section, the rim lighting is used to show if the player or enemy has obtained the powerup crystal and is able to kill.
+The rim lighting, as mentioned in the [Base Game](#Base-Game) section, the rim lighting is used to show if the player or enemy has obtained the powerup crystal and is able to kill. The rim lighting was modified by adding the ability to change and apply colors and textures respectively. This allows us to have fully textured objects such as the player and give it rim lighting which the class code did not have, which makes the object affected give a visual indicator.
 
-The rim lighting was modified by adding the ability to change and apply colors and textures respectively. This allows us to have fully textured objects such as the player and give it rim lighting which the class code did not have, which makes the object affected give a visual indicator.
+The screenshot below shows the rim lighting working with the texture applied to the player character from [RPG Hero PBR HP Polyart](##ThirdParty-Resources-and-Credits).
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Rim_Lighting.gif?raw=true)
 
 #### Tranparency
 The crystal modified its own transpaency by setting the value of its shader variable to the C# variable call ```Opacity```. By modifying the shader variable directly, we can dynamically change the transparency of the crystal, which creates a fade-in-fade-out effect that makes the crystal a bit more noticable and also plays with the psychology of the player as we have been conditioned to understand that a blinking object is important, either as part of the game or as a visual indicator of the object potentially disappearing.
