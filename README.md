@@ -2,7 +2,7 @@
  
 ## Explanations
 ### Base Game
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/[branch]/image.jpg?raw=true)
+![alt text]([https://github.com/JL-40/Graphics_Assignment_1/blob/[branch]/image.jpg](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Gameplay_Screenshot.jpg?raw=true)
 
 ### Illuminatioin
 
