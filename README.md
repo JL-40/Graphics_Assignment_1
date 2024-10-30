@@ -1,4 +1,7 @@
 # Graphics_Assignment_1
+
+## Video Report
+[Comp Graphics Assignment 1 Video Report](https://youtu.be/TryUkKaSO8k)
  
 ## Explanations
 ### Base Game
