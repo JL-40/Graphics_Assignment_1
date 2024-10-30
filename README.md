@@ -33,7 +33,7 @@ I have combined these three together since they are part of a single shaderlab s
 The toggling for each setting; No Lighting, Ambient Only, Specular Only, Ambient + Specular, and Ambinent + Specular + Custom Effect/Shader, are implemented using a C# script to change the values of shaderlab variables and/or materal the object will use. Each object that is affected will have a C# script that allows for an "Illumination Manager" to tell every object to what toggle should happen when a key is pressed. This is the simplests way we can implement it, however, it is by far not the best or most elegant, it just works and works well enough.
 
 #### Toon Ramp
-There are no changes to the toom ramp shaderlab script. It is taken from the class slides.
+There are no changes to the toom ramp shaderlab script itself at this time, taken from the class slides, but has been implemented alongside the above togglable Illumination Manager Functionality.
 
 ### Color Grading
 #### Night time LUT
