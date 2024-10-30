@@ -1,7 +1,10 @@
 # Graphics_Assignment_1
 
-## Video Report
+## Report
+### Video Report
 [Comp Graphics Assignment 1 Video Report](https://youtu.be/TryUkKaSO8k)
+### Slides
+[INFR 1350U - Intro to Computer Graphics: Assignment 1](https://docs.google.com/presentation/d/1tRHT3C_LpAaZC8hJ9qsogvOmAxXBVREYNdiiqRI-b2E/edit?usp=sharing)
  
 ## Explanations
 ### Base Game
