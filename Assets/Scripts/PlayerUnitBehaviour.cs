@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,6 +30,8 @@ public class PlayerUnitBehaviour : MonoBehaviour
 
     void Update()
     {
+        Quit();
+
         PickTarget();
 
         DangerousTick();
@@ -65,10 +67,30 @@ public class PlayerUnitBehaviour : MonoBehaviour
     public void Die()
     {
         Destroy(this.gameObject);
+        EndGame();
     }
 
     public void Win()
     {
+        EndGame();
+    }
 
+    void EndGame()
+    {
+        Time.timeScale = 0f;
+        Debug.Log($"Press 'Escape' to Quit.");
+    }
+
+    // Exit play
+    public void Quit()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+#if UNITY_EDITOR
+            EditorApplication.ExitPlaymode();
+#else
+            Application.Quit();
+#endif
+        }
     }
 }
