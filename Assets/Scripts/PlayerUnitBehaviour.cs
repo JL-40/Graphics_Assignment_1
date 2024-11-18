@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PlayerUnitBehaviour : MonoBehaviour
 {
@@ -18,11 +19,15 @@ public class PlayerUnitBehaviour : MonoBehaviour
 
     public Renderer mat;
 
+    [SerializeField] Text pauseText;
+
     void Start()
     {
         m_Agent = GetComponent<NavMeshAgent>();
         
         Debug.Log("Test");
+
+        pauseText.gameObject.SetActive(false);
     }
 
 
@@ -38,6 +43,8 @@ public class PlayerUnitBehaviour : MonoBehaviour
 
         if (score == 4)
             Win();
+
+        Unpause();
     }
 
     void PickTarget()
@@ -72,6 +79,11 @@ public class PlayerUnitBehaviour : MonoBehaviour
 
     public void Win()
     {
+        if (pauseText.gameObject.activeSelf == false)
+        {
+            pauseText.gameObject.SetActive(true);
+        }
+
         EndGame();
     }
 
@@ -91,6 +103,15 @@ public class PlayerUnitBehaviour : MonoBehaviour
 #else
             Application.Quit();
 #endif
+        }
+    }
+
+    public void Unpause()
+    {
+        if (Input.GetKeyDown(KeyCode.P) && Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            score *= -1; // inverse score to unpause.
         }
     }
 }
