@@ -57,9 +57,10 @@ The gif below shows the crystal dynamically adjusting their tranparency of their
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Transparent_Crystal.gif?raw=true)
 
 ## Third-Party Resources and Credits
-The following third-party resources were used to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives or looking at a flat color skybox. 
+The following third-party resources were used to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives or looking at a flat color skybox.
 
 - Tower and tree models by LowPolyBoy. [(FREE) Low Poly Game Assets](https://sketchfab.com/3d-models/free-low-poly-game-assets-bbbfbeccfc9047b8b3f15b1c90061cdf)
 - Player model and animations by Dungeon Mason. [RPG Hero PBR HP Polyart](https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/rpg-hero-pbr-hp-polyart-121480)
 - Powerup gem model by AurnySky. [Simple Gems Ultimate Animated Customizable Pack](https://assetstore.unity.com/packages/3d/props/simple-gems-ultimate-animated-customizable-pack-73764)
 - Skybox by rpgwhitelock. [AllSky Free - 10 Sky / Skybox Set](https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014)
+- New enemy model and animations by Pxltiger. [Zombie](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
