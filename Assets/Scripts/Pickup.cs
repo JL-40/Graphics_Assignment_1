@@ -44,6 +44,12 @@ public class Pickup : MonoBehaviour
             Destroy(gameObject);
             other.GetComponent<EnemyBehaviour>().dangerous = true;
             other.GetComponent<EnemyBehaviour>().dangerousTimer = 10.0f;
+
+            if (other.GetComponent<EnemyBehaviour>().hasAnimation)
+            {
+                other.GetComponent<EnemyBehaviour>().anim.SetTrigger("Danger");
+            }
+
             other.GetComponent<EnemyBehaviour>().mat.material.SetFloat("_RimPower", 0.5f);
         }
         else if (other.gameObject.tag == p_Tag)

@@ -8,6 +8,8 @@ public class EnemyBehaviour : MonoBehaviour
 
 
     public NavMeshAgent m_Agent;
+    public Animator anim;
+    public bool hasAnimation = false;
 
     public Transform Target;
 
@@ -67,6 +69,12 @@ public class EnemyBehaviour : MonoBehaviour
             if (dangerousTimer < 0.0f)
             {
                 dangerous = false;
+
+                if (hasAnimation)
+                {
+                    anim.SetTrigger("EndDanger");
+                }
+
                 mat.material.SetFloat("_RimPower", 8.0f);
             }
         }
