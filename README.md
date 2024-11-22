@@ -67,7 +67,7 @@ The following third-party resources were used to save time on modelling and anim
 - Skybox by rpgwhitelock. [AllSky Free - 10 Sky / Skybox Set](https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014)
 
 ## Course Project Report
-The following is the report for the course project. If you need to refresh yourself about assignmnet 1 or want look through the assignment 1 report, go to [Assingnment 1 Report](#assignment-1-report)
+The following is the report for the course project. If you need to refresh yourself about assignmnet 1 or want look through the assignment 1 report, go to [Assingnment 1 Report](#assignment-1-report).
 
 ## Third-Party Resources and Credits - Course Project
 The following third-party resources were added after Assignment 1. The reasoning is the same as assignment 1, we used these assets to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives.
