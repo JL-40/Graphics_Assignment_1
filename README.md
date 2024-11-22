@@ -8,7 +8,7 @@ The following are part of the report for assignment 1. We left this here as a re
 ### Slides
 [INFR 1350U - Intro to Computer Graphics: Assignment 1](https://docs.google.com/presentation/d/1tRHT3C_LpAaZC8hJ9qsogvOmAxXBVREYNdiiqRI-b2E/edit?usp=sharing)
  
-## Explanations
+## Assignement 1 Explanations
 ### Base Game
 The game is a top-down, point-and-click style game that takes minor inspiration from pac-man. There are four enemies that the player must defeat to win, both enemies and the player can only defeat each other by obtaining powerups in the form of powerup crystals that will randomly spawn. Once these powerups are obtained, the player or enemies must hunt the other to defeat them, winning the game when the player dies or all the enemies die.
 
@@ -68,6 +68,16 @@ The following third-party resources were used to save time on modelling and anim
 
 ## Course Project Report
 The following is the report for the course project. If you need to refresh yourself about assignmnet 1 or want look through the assignment 1 report, go to [Assingnment 1 Report](#assignment-1-report).
+
+### Video Presentation
+
+
+## Course Project Explanations
+### Assignment 1 Improvements
+
+### Texturing
+
+### Visual Effects
 
 ## Third-Party Resources and Credits - Course Project
 The following third-party resources were added after Assignment 1. The reasoning is the same as assignment 1, we used these assets to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives.
