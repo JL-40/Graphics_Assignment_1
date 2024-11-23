@@ -81,4 +81,4 @@ The following is the report for the course project. If you need to refresh yours
 
 ## Third-Party Resources and Credits - Course Project
 The following third-party resources were added after Assignment 1. The reasoning is the same as assignment 1, we used these assets to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives.
-- New enemy model and animations by Pxltiger. [Zombie](https://assetstore.unity.com/packages/3d/characters/humanoids/zombie-30232)
+- New enemy model and animations by Dungeon Mason. [Dog Knight PBR Polyart](https://assetstore.unity.com/packages/3d/characters/animals/dog-knight-pbr-polyart-135227)

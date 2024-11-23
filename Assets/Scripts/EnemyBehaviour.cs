@@ -88,7 +88,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (coll.GetComponent<PlayerUnitBehaviour>().dangerous)
             {
-                coll.GetComponent<PlayerUnitBehaviour>().score++;
+                GameManager.Instance.Score();
                 Die();
             }
             else if (dangerous)

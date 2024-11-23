@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 
 public class PlayerUnitBehaviour : MonoBehaviour
 {
@@ -19,32 +18,19 @@ public class PlayerUnitBehaviour : MonoBehaviour
 
     public Renderer mat;
 
-    [SerializeField] Text pauseText;
-
     void Start()
     {
         m_Agent = GetComponent<NavMeshAgent>();
         
         Debug.Log("Test");
-
-        pauseText.gameObject.SetActive(false);
     }
-
-
 
 
     void Update()
     {
-        Quit();
-
         PickTarget();
 
         DangerousTick();
-
-        if (score == 4)
-            Win();
-
-        Unpause();
     }
 
     void PickTarget()
@@ -74,44 +60,6 @@ public class PlayerUnitBehaviour : MonoBehaviour
     public void Die()
     {
         Destroy(this.gameObject);
-        EndGame();
-    }
-
-    public void Win()
-    {
-        if (pauseText.gameObject.activeSelf == false)
-        {
-            pauseText.gameObject.SetActive(true);
-        }
-
-        EndGame();
-    }
-
-    void EndGame()
-    {
-        Time.timeScale = 0f;
-        Debug.Log($"Press 'Escape' to Quit.");
-    }
-
-    // Exit play
-    public void Quit()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-#if UNITY_EDITOR
-            EditorApplication.ExitPlaymode();
-#else
-            Application.Quit();
-#endif
-        }
-    }
-
-    public void Unpause()
-    {
-        if (Input.GetKeyDown(KeyCode.P) && Time.timeScale == 0f)
-        {
-            Time.timeScale = 1f;
-            score *= -1; // inverse score to unpause.
-        }
+        GameManager.Instance.EndGame();
     }
 }
