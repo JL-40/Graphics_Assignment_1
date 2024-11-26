@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] Text pauseText;
     [SerializeField] int score = 0;
 
+    [SerializeField] ParticleSystem deathParticles;
+    [SerializeField] float delay;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -49,7 +51,8 @@ public class GameManager : MonoBehaviour
             pauseText.gameObject.SetActive(true);
         }
 
-        EndGame();
+        //EndGame();
+        DelayedEndGame();
     }
 
     public void EndGame()
@@ -83,5 +86,22 @@ public class GameManager : MonoBehaviour
                 pauseText.gameObject.SetActive(true);
             }
         }
+    }
+
+    public void PlayDeathVFX(Transform origin)
+    {
+        ParticleSystem newVFX = Instantiate(deathParticles);
+        newVFX.transform.position = origin.position;        
+        Destroy(newVFX);
+    }
+
+    public void DelayedEndGame()
+    {
+        StartCoroutine(DelayEndGame());
+    }
+    IEnumerator DelayEndGame()
+    {
+        yield return new WaitForSeconds(delay);
+        EndGame();
     }
 }

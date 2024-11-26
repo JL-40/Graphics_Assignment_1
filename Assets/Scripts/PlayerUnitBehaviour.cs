@@ -83,7 +83,9 @@ public class PlayerUnitBehaviour : MonoBehaviour
 
     public void Die()
     {
+        GameManager.Instance.PlayDeathVFX(transform);
         Destroy(this.gameObject);
-        GameManager.Instance.EndGame();
+        //GameManager.Instance.EndGame();
+        GameManager.Instance.DelayedEndGame();
     }
 }

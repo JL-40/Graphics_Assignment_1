@@ -25,7 +25,6 @@ public class EnemyBehaviour : MonoBehaviour
     public Renderer shield;
 
     public LightScript ls;
-
     void Start()
     {
         m_Agent = GetComponent<NavMeshAgent>();
@@ -114,6 +113,7 @@ public class EnemyBehaviour : MonoBehaviour
             if (coll.GetComponent<PlayerUnitBehaviour>().dangerous)
             {
                 GameManager.Instance.Score();
+                GameManager.Instance.PlayDeathVFX(transform);
                 Die();
             }
             else if (dangerous)
