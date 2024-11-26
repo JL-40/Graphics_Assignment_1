@@ -4,6 +4,9 @@ Shader "Sorcery/ToonShade1"
     {
         _Color ("Color", Color) = (1,1,1,1)
         _RampTex ("Ramp Texture", 2D) = "white" {}
+
+        _MainTex ("Texture", 2D) = "white" {}
+        [MaterialToggle] _UseTexture ("Use Tex", float) = 0
     }
     SubShader
     {
@@ -21,6 +24,9 @@ Shader "Sorcery/ToonShade1"
         float4 _Color;
         sampler2D _RampTex;
 
+        sampler2D _MainTex;
+        float _UseTexture;
+
         float4 LightingToonRamp (SurfaceOutput s, fixed3 lightDir, fixed atten)
         {
             float diff = dot (s.Normal, lightDir);
@@ -37,6 +43,9 @@ Shader "Sorcery/ToonShade1"
 
         void surf (Input IN, inout SurfaceOutput o)
         {
+            if (_UseTexture)
+            o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+            else
             o.Albedo = _Color.rgb;
         }
         ENDCG

@@ -74,6 +74,9 @@ public class MaterialChanger : MonoBehaviour
         render.material.SetFloat("_UseSpecular", 0.0f);
 
         render.material = matToon;
+
+        if (Textured)
+            render.material.SetFloat("_UseTexture", 1.0f);
     }
 
     public void SettingTextureOnOff()
