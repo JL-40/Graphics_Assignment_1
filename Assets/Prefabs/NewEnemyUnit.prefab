@@ -129,6 +129,8 @@ MonoBehaviour:
   player: {fileID: 0}
   pickupholder: {fileID: 0}
   mat: {fileID: 224329807893029331}
+  sword: {fileID: 2983207761088808949}
+  shield: {fileID: 3937201644545535850}
   ls: {fileID: 0}
 --- !u!1001 &2284430659639433149
 PrefabInstance:
@@ -204,5 +206,15 @@ Animator:
 --- !u!137 &224329807893029331 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2066896392024962670, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+  m_PrefabInstance: {fileID: 2284430659639433149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2983207761088808949 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3951229398022279240, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+  m_PrefabInstance: {fileID: 2284430659639433149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &3937201644545535850 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2958915110835960023, guid: 45288819fde2143449a96207b14db0bb, type: 3}
   m_PrefabInstance: {fileID: 2284430659639433149}
   m_PrefabAsset: {fileID: 0}

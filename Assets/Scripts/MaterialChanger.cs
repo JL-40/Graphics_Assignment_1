@@ -5,6 +5,7 @@ using UnityEngine;
 public class MaterialChanger : MonoBehaviour
 {
 
+    bool Textured;
     public Renderer render;
 
     public Material mat1;
@@ -75,4 +76,15 @@ public class MaterialChanger : MonoBehaviour
         render.material = matToon;
     }
 
+    public void SettingTextureOnOff()
+    {
+        if (Textured)
+        render.material.SetFloat("_UseTexture", 0.0f);
+        else
+        render.material.SetFloat("_UseTexture", 1.0f);
+
+        Textured = !Textured;
+    }
+
+   
 }

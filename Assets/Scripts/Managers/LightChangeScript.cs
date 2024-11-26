@@ -73,5 +73,14 @@ public class LightChangeScript : MonoBehaviour
                 obj.Setting5();
             }
         }
+
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            foreach (MaterialChanger obj in Objects)
+            {
+                obj.SettingTextureOnOff();
+            }
+        }
     }
 }

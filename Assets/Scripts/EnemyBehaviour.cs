@@ -21,6 +21,8 @@ public class EnemyBehaviour : MonoBehaviour
     public PickUpSpawner pickupholder;
 
     public Renderer mat;
+    public Renderer sword;
+    public Renderer shield;
 
     public LightScript ls;
 
@@ -66,6 +68,19 @@ public class EnemyBehaviour : MonoBehaviour
         if (dangerous)
         {
             dangerousTimer -= Time.deltaTime;
+           
+            
+            if (dangerousTimer < 2.0f)
+            {
+                mat.material.SetFloat("_RimPower", 8.0f);
+                sword.material.SetFloat("_RimPower", 8.0f);
+                shield.material.SetFloat("_RimPower", 8.0f);
+
+                mat.material.SetFloat("_doFlash", 1.0f);
+                sword.material.SetFloat("_doFlash", 1.0f);
+                shield.material.SetFloat("_doFlash", 1.0f);
+             
+            }
             if (dangerousTimer < 0.0f)
             {
                 dangerous = false;
@@ -76,6 +91,16 @@ public class EnemyBehaviour : MonoBehaviour
                 }
 
                 mat.material.SetFloat("_RimPower", 8.0f);
+                sword.material.SetFloat("_RimPower", 8.0f);
+                shield.material.SetFloat("_RimPower", 8.0f);
+
+                mat.material.SetFloat("_doFlash", 0.0f);
+                sword.material.SetFloat("_doFlash", 0.0f);
+                shield.material.SetFloat("_doFlash", 0.0f);
+
+                mat.material.SetColor("_OutlineColor", new Color(1.0f,1.0f,1.0f,1.0f));
+                sword.material.SetColor("_OutlineColor", new Color(1.0f, 1.0f, 1.0f, 1.0f));
+                shield.material.SetColor("_OutlineColor", new Color(1.0f, 1.0f, 1.0f, 1.0f));
             }
         }
 
