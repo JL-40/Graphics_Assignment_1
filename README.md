@@ -1,12 +1,14 @@
-# Graphics_Assignment_1
+# Graphics: Course Project
 
-## Report
+##  Assignment 1 Report
+The following are part of the report for assignment 1. We left this here as a refresher for marking, as well as, for referencing. For Course Project Report, go to [Course Project Report](#course-project-report).
+
 ### Video Report
 [Comp Graphics Assignment 1 Video Report](https://youtu.be/TryUkKaSO8k)
 ### Slides
 [INFR 1350U - Intro to Computer Graphics: Assignment 1](https://docs.google.com/presentation/d/1tRHT3C_LpAaZC8hJ9qsogvOmAxXBVREYNdiiqRI-b2E/edit?usp=sharing)
  
-## Explanations
+## Assignement 1 Explanations
 ### Base Game
 The game is a top-down, point-and-click style game that takes minor inspiration from pac-man. There are four enemies that the player must defeat to win, both enemies and the player can only defeat each other by obtaining powerups in the form of powerup crystals that will randomly spawn. Once these powerups are obtained, the player or enemies must hunt the other to defeat them, winning the game when the player dies or all the enemies die.
 
@@ -56,10 +58,27 @@ The crystal modified its own transpaency by setting the value of its shader vari
 The gif below shows the crystal dynamically adjusting their tranparency of their material shader.
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Transparent_Crystal.gif?raw=true)
 
-## Third-Party Resources and Credits
-The following third-party resources were used to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives or looking at a flat color skybox. 
+## Third-Party Resources and Credits - Assignment 1
+The following third-party resources were used to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives or looking at a flat color skybox.
 
 - Tower and tree models by LowPolyBoy. [(FREE) Low Poly Game Assets](https://sketchfab.com/3d-models/free-low-poly-game-assets-bbbfbeccfc9047b8b3f15b1c90061cdf)
 - Player model and animations by Dungeon Mason. [RPG Hero PBR HP Polyart](https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/rpg-hero-pbr-hp-polyart-121480)
 - Powerup gem model by AurnySky. [Simple Gems Ultimate Animated Customizable Pack](https://assetstore.unity.com/packages/3d/props/simple-gems-ultimate-animated-customizable-pack-73764)
 - Skybox by rpgwhitelock. [AllSky Free - 10 Sky / Skybox Set](https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014)
+
+## Course Project Report
+The following is the report for the course project. If you need to refresh yourself about assignmnet 1 or want look through the assignment 1 report, go to [Assingnment 1 Report](#assignment-1-report).
+
+### Video Presentation
+
+
+## Course Project Explanations
+### Assignment 1 Improvements
+
+### Texturing
+
+### Visual Effects
+
+## Third-Party Resources and Credits - Course Project
+The following third-party resources were added after Assignment 1. The reasoning is the same as assignment 1, we used these assets to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives.
+- New enemy model and animations by Dungeon Mason. [Dog Knight PBR Polyart](https://assetstore.unity.com/packages/3d/characters/animals/dog-knight-pbr-polyart-135227)

@@ -5,13 +5,17 @@ Shader "Sorcery/TransparentGem"
         _Color ("Color", Color) = (1,1,1,1)
 
         _Opacity("Alpha", Range(0.0,1.0)) = 1.0
+
+        [MaterialToggle] _doFlash ("flashing", float) = 0
+
+        _Amount ("Extrude", Range(-1,30)) = 0.001
     }
     SubShader
     {
         Tags { "Queue" = "Transparent" }
 
         CGPROGRAM
-        #pragma surface surf Standard alpha:fade
+        #pragma surface surf Standard alpha:fade vertex:vert
 
         struct Input
         {
@@ -24,7 +28,23 @@ Shader "Sorcery/TransparentGem"
 
         float _Opacity;
 
-        
+        float _doFlash;
+
+        float _Amount;
+
+        struct appdata
+        {
+            float4 vertex: POSITION;
+            float3 normal: NORMAL;
+            float4 texcoord: TEXCOORD0;
+        };
+
+        void vert (inout appdata v) {
+            if (_doFlash)
+            {
+                v.vertex.xyz += v.normal * abs(_Amount * sin(_Time.z * 5)) / 100;
+            }
+        }
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {

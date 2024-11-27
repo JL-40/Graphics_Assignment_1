@@ -44,7 +44,17 @@ public class Pickup : MonoBehaviour
             Destroy(gameObject);
             other.GetComponent<EnemyBehaviour>().dangerous = true;
             other.GetComponent<EnemyBehaviour>().dangerousTimer = 10.0f;
+
+            if (other.GetComponent<EnemyBehaviour>().hasAnimation)
+            {
+                other.GetComponent<EnemyBehaviour>().anim.SetTrigger("Danger");
+            }
+
             other.GetComponent<EnemyBehaviour>().mat.material.SetFloat("_RimPower", 0.5f);
+
+            other.GetComponent<EnemyBehaviour>().mat.material.SetColor("_OutlineColor", new Color(1.0f, 0.0f, 0.0f, 1.0f));
+            other.GetComponent<EnemyBehaviour>().sword.material.SetColor("_OutlineColor", new Color(1.0f, 0.0f, 0.0f, 1.0f));
+            other.GetComponent<EnemyBehaviour>().shield.material.SetColor("_OutlineColor", new Color(1.0f, 0.0f, 0.0f, 1.0f));
         }
         else if (other.gameObject.tag == p_Tag)
         {
@@ -55,6 +65,11 @@ public class Pickup : MonoBehaviour
             other.GetComponent<PlayerUnitBehaviour>().dangerousTimer = 10.0f;
             other.GetComponent<PlayerUnitBehaviour>().anim.SetTrigger("Danger");
             other.GetComponent<PlayerUnitBehaviour>().mat.material.SetFloat("_RimPower", 0.5f);
+
+
+            other.GetComponent<PlayerUnitBehaviour>().mat.material.SetColor("_OutlineColor", new Color(1.0f, 0.0f, 0.0f, 1.0f));
+            other.GetComponent<PlayerUnitBehaviour>().sword.material.SetColor("_OutlineColor", new Color(1.0f, 0.0f, 0.0f, 1.0f));
+            other.GetComponent<PlayerUnitBehaviour>().shield.material.SetColor("_OutlineColor", new Color(1.0f, 0.0f, 0.0f, 1.0f));
         }
     }
 }

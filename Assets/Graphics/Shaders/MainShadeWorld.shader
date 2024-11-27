@@ -13,7 +13,8 @@ Shader "Sorcery/MainShadeWorld"{
         _Shininess("Shininess", Float) = 10
 
 
-       
+        [MaterialToggle] _UseTexture ("Use Tex", float) = 0
+        _MainTex("Texture", 2D) = "white" {}
 
 
     }
@@ -37,18 +38,17 @@ Shader "Sorcery/MainShadeWorld"{
             float _UseLambert;
             float _UseSpecular;
 
+            float _UseTexture;
+            uniform sampler2D _MainTex;
+
+
 
             // unity defined variables
             uniform float4 _LightColor0;
 
 
-            // unity 3 definitions
-            // float4x4 _Object2World;
-            // float4x4 _World2Object;
-            // float4 _WorldSpaceLightPos0;
+            
 
-
-            // base input structs
 
 
             struct Input {
@@ -60,7 +60,7 @@ Shader "Sorcery/MainShadeWorld"{
             struct vertexInput {
                 float4 vertex: POSITION;
                 float3 normal: NORMAL;
-
+                float2 uv: TEXCOORD0;
 
             };
 
@@ -70,6 +70,7 @@ Shader "Sorcery/MainShadeWorld"{
                 float4 posWorld : TEXCOORD0;
                 float4 normalDir : TEXCOORD1;
                 float4 col: COLOR;
+                float2 uv: TEXCOORD2;
             };
 
 
@@ -81,15 +82,8 @@ Shader "Sorcery/MainShadeWorld"{
             vertexOutput vert(vertexInput v) {
                 vertexOutput o;
 
-
                
                 float3 normalDirection = normalize(mul(float4(v.normal,0.0),unity_WorldToObject).xyz);
-
-
-
-
-
-
 
 
                 float3 lightDirection;
@@ -120,7 +114,12 @@ Shader "Sorcery/MainShadeWorld"{
                     o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                     o.normalDir = normalize(mul(float4(v.normal, 0.0), unity_WorldToObject));
                     o.pos = UnityObjectToClipPos(v.vertex);
+
+                    
                 }
+
+                o.uv = v.uv;
+
                 return o;
             }
 
@@ -128,8 +127,7 @@ Shader "Sorcery/MainShadeWorld"{
             // fragment function
             float4 frag(vertexOutput i) : COLOR
             {
-                if (_UseSpecular)
-                {
+                
                 float3 normalDirection = i.normalDir;
                 float atten = 1.0;
 
@@ -149,7 +147,12 @@ Shader "Sorcery/MainShadeWorld"{
                 float3 specularReflection = atten * _SpecColor.rgb * shininessPower;
 
 
-                float3 lightFinal = specularReflection * _SpecColor.rgb;
+                float3 lightFinal = (0,0,0);
+                
+                if (_UseSpecular)
+                {
+                    lightFinal += specularReflection * _SpecColor.rgb;
+                }
                
                 if (_UseAmbient)
                 {
@@ -160,13 +163,14 @@ Shader "Sorcery/MainShadeWorld"{
                 lightFinal += diffuseReflection * _Color.rgb;
                 }
                
-               
-                return float4(lightFinal, 1.0);
-                }
-                else
+                float4 textureColor = (1,1,1,1);
+                if (_UseTexture)
                 {
-                    return i.col;
+                    textureColor = tex2D(_MainTex, i.uv);
                 }
+               
+                return float4(lightFinal, 1.0) * textureColor;
+                
 
 
             }

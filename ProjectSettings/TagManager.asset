@@ -8,6 +8,7 @@ TagManager:
   - EnemyUnit
   - Pickup
   - Unit
+  - Noraycasts
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - PlayerChar
   - EnemyChar
-  - 
+  - Noraycasts
   - 
   - 
   - 

@@ -126,6 +126,8 @@ MonoBehaviour:
   dangerousTimer: 0
   score: 0
   mat: {fileID: 8621881842169243281}
+  shield: {fileID: 0}
+  sword: {fileID: 0}
 --- !u!1001 &8520927609110373137
 PrefabInstance:
   m_ObjectHideFlags: 0

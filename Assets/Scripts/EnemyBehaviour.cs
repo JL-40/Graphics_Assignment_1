@@ -8,6 +8,8 @@ public class EnemyBehaviour : MonoBehaviour
 
 
     public NavMeshAgent m_Agent;
+    public Animator anim;
+    public bool hasAnimation = false;
 
     public Transform Target;
 
@@ -19,9 +21,10 @@ public class EnemyBehaviour : MonoBehaviour
     public PickUpSpawner pickupholder;
 
     public Renderer mat;
+    public Renderer sword;
+    public Renderer shield;
 
     public LightScript ls;
-
     void Start()
     {
         m_Agent = GetComponent<NavMeshAgent>();
@@ -64,10 +67,39 @@ public class EnemyBehaviour : MonoBehaviour
         if (dangerous)
         {
             dangerousTimer -= Time.deltaTime;
+           
+            
+            if (dangerousTimer < 2.0f)
+            {
+                mat.material.SetFloat("_RimPower", 8.0f);
+                sword.material.SetFloat("_RimPower", 8.0f);
+                shield.material.SetFloat("_RimPower", 8.0f);
+
+                mat.material.SetFloat("_doFlash", 1.0f);
+                sword.material.SetFloat("_doFlash", 1.0f);
+                shield.material.SetFloat("_doFlash", 1.0f);
+             
+            }
             if (dangerousTimer < 0.0f)
             {
                 dangerous = false;
+
+                if (hasAnimation)
+                {
+                    anim.SetTrigger("EndDanger");
+                }
+
                 mat.material.SetFloat("_RimPower", 8.0f);
+                sword.material.SetFloat("_RimPower", 8.0f);
+                shield.material.SetFloat("_RimPower", 8.0f);
+
+                mat.material.SetFloat("_doFlash", 0.0f);
+                sword.material.SetFloat("_doFlash", 0.0f);
+                shield.material.SetFloat("_doFlash", 0.0f);
+
+                mat.material.SetColor("_OutlineColor", new Color(1.0f,1.0f,1.0f,1.0f));
+                sword.material.SetColor("_OutlineColor", new Color(1.0f, 1.0f, 1.0f, 1.0f));
+                shield.material.SetColor("_OutlineColor", new Color(1.0f, 1.0f, 1.0f, 1.0f));
             }
         }
 
@@ -80,7 +112,8 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (coll.GetComponent<PlayerUnitBehaviour>().dangerous)
             {
-                coll.GetComponent<PlayerUnitBehaviour>().score++;
+                GameManager.Instance.Score();
+                GameManager.Instance.PlayDeathVFX(transform);
                 Die();
             }
             else if (dangerous)
