@@ -1,7 +1,8 @@
 # Graphics: Course Project
 
 ##  Assignment 1 Report
-The following are part of the report for assignment 1. We left this here as a refresher for marking, as well as, for referencing. ***__For Course Project Report, go to [Course Project Report](#course-project-report).__***
+The following are part of the report for assignment 1. We left this here as a refresher for marking, as well as, for referencing. 
+***__For Course Project Report, go to [Course Project Report](#course-project-report).__***
 
 ### Video Report
 [Comp Graphics Assignment 1 Video Report](https://youtu.be/TryUkKaSO8k)
