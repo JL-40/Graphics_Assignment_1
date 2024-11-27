@@ -5,7 +5,7 @@ using UnityEngine;
 public class MaterialChanger : MonoBehaviour
 {
 
-    bool Textured;
+    bool Textured = true;
     public Renderer render;
 
     public Material mat1;

@@ -9,7 +9,16 @@ public class LightChangeScript : MonoBehaviour
 
     public List<MaterialChanger> Objects;
 
+    public Renderer Player;
+
+    public List<Renderer> Enemies;
+
     public Transform TileOwner;
+
+
+    bool Textured = true;
+
+    bool Toon = false;
 
     private void Awake()
     {
@@ -72,6 +81,34 @@ public class LightChangeScript : MonoBehaviour
             {
                 obj.Setting5();
             }
+
+            if (Toon)
+            {
+                if (Player!=null)
+                 Player.material.SetFloat("_doToon", 0.0f);
+            }
+            else
+            {
+                if (Player != null)
+                    Player.material.SetFloat("_doToon", 1.0f);
+            }
+
+            foreach (Renderer ren in Enemies)
+            {
+                if (ren == null) continue;
+
+
+                if (Textured)
+                {
+                    ren.material.SetFloat("_doToon", 0.0f);
+                }
+                else
+                {
+                    ren.material.SetFloat("_doToon", 1.0f);
+                }
+            }
+
+            Toon = !Toon;
         }
 
 
@@ -81,6 +118,36 @@ public class LightChangeScript : MonoBehaviour
             {
                 obj.SettingTextureOnOff();
             }
+
+            if (Textured)
+            {
+                Player.material.SetFloat("_UseTexture", 0.0f);
+            }
+            else
+            {
+                Player.material.SetFloat("_UseTexture", 1.0f);
+            }
+
+            foreach (Renderer ren in Enemies)
+            {
+                if (ren == null) continue;
+                    
+               
+                if (Textured)
+                {
+                    ren.material.SetFloat("_UseTexture", 0.0f);
+                }
+                else
+                {
+                    ren.material.SetFloat("_UseTexture", 1.0f);
+                }
+            }
+
+
+
+
+
+            Textured = !Textured;
         }
     }
 }

@@ -2,7 +2,9 @@ Shader "TintRimShaderToon"
 {
     Properties
     {
+        [MaterialToggle] _UseTexture ("UseTexture", float) = 0
         _MainTex("Texture", 2D) = "white" {}
+        _ColorMain("MainColor", Color) = (1,1,1,1)
         _ColorTint("Tint", Color) = (1.0, 0.6, 0.6, 1.0)
         _RimColor("Rim Color", Color) = (0,0.5,0.5,0.0)
         _RimPower("Rim Power", Range(0.5,8.0)) = 3.0
@@ -58,9 +60,15 @@ Shader "TintRimShaderToon"
         {
             color *= _ColorTint;
         }
+
+        float _UseTexture;
+        fixed4 _ColorMain;
         sampler2D _MainTex;
         void surf(Input IN, inout SurfaceOutput o) {
+            if (_UseTexture)
             o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+            else
+            o.Albedo = _ColorMain;
             //	half rim = dot(normalize(IN.viewDir), o.Normal);
             half rim = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));
             //o.Emission = _RimColor.rgb * rim;
