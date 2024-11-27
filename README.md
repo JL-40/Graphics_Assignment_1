@@ -114,7 +114,7 @@ In our previous version, we experienced concerns that the powerup gems could spa
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_StencilAid.gif?raw=true)
 
 #### Wave
-In our previous version, you could see the skybox from below due to the lack of screen coverage. We decided to recontextualize our scene to be a proper island, and so we implemented waves. Our islands is circular (vaguely), and we found the waves moving linearly to be insufficient, so the wave shader has been modified to define a point on itself, and the waves collapse inward onto that location. For example, inputting 0 and 0 causes the waves to radially crash inwards towards our island. Amplitude, frequency, and speed are calculated traditionally.
+In our previous version, you could see the skybox from below due to the lack of screen coverage. We decided to recontextualize our scene to be a proper island, and so we implemented waves. Our islands is circular (vaguely), and we found the waves moving linearly to be insufficient, so the wave shader has been modified to define a point on itself, and the waves collapse inward onto that location. For example, inputting 0 and 0 causes the waves to radially crash inwards towards our island. Amplitude, frequency, and speed are calculated traditionally. (I made a plane with far more vertices in blender to improve wave smoothness)
 
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_WavesAid.gif?raw=true)
 
