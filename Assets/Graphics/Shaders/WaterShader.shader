@@ -4,6 +4,7 @@ Shader "Sorcery/WaveFromOriginPoint"
     {
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _FoamTex ("Albedo (RGB)", 2D) = "white" {}
+        [MaterialToggle] _UseTexture ("UseTexture", float) = 0
         _FoamColor ("colorFoam", Color) = (0,0,0,1) 
         _FoamMag ("Foam Height", Range(-0.1,0.1)) = 0
         _FoamOpac ("Foam Threshold", Range(0,1)) = 0
@@ -42,6 +43,7 @@ Shader "Sorcery/WaveFromOriginPoint"
             float _ScrollX;
             float _ScrollY;
 
+            float _UseTexture;
             sampler2D _MainTex;
             
             struct appdata
@@ -81,7 +83,7 @@ Shader "Sorcery/WaveFromOriginPoint"
 
                 v.vertex.y += waveHeight;
 
-         
+
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.uv = v.uv;
                 o.distance = distance; //this was for testing...ill leave it in, just in case it breaks before our performance later.
@@ -93,7 +95,11 @@ Shader "Sorcery/WaveFromOriginPoint"
             {
                 _ScrollX *= _Time;
                 _ScrollY *= _Time;
-                half4 water = (tex2D (_MainTex, i.uv + float2(_ScrollX, _ScrollY)));
+                half4 water;
+                if (_UseTexture)
+                water = (tex2D (_MainTex, i.uv + float2(_ScrollX, _ScrollY)));
+                else
+                water = (0,0,1,1);
                 //return half4(i.distance, i.distance, i.distance, 1.0); //(old visualisation Code)
                 half4 texColor = tex2D(_MainTex, i.uv);
 
@@ -121,6 +127,7 @@ Shader "Sorcery/WaveFromOriginPoint"
             float _ScrollX;
             float _ScrollY;
 
+            float _UseTexture;
             sampler2D _FoamTex;
             float4 _FoamColor;
             float _FoamMag;
@@ -187,9 +194,19 @@ Shader "Sorcery/WaveFromOriginPoint"
             {
                 _ScrollX *= _Time /2 ;
                 _ScrollY *= _Time /2;
-
-                float foam = tex2D(_FoamTex, i.uv + float2(_ScrollX, _ScrollY)).a;
-                half4 water = _FoamColor * (tex2D (_FoamTex, i.uv + float2(_ScrollX, _ScrollY)));
+                half4 water;
+                float foam;
+                
+                if (_UseTexture)
+                {
+                water = _FoamColor * (tex2D (_FoamTex, i.uv + float2(_ScrollX, _ScrollY)));
+                foam = tex2D(_FoamTex, i.uv + float2(_ScrollX, _ScrollY)).a;
+                }
+                else
+                {
+                water = _FoamColor;
+                foam = 0.5;
+                }
                 
 
                 return half4(water.r,water.g,water.b, foam * _FoamOpac); 
