@@ -67,7 +67,7 @@ The following third-party resources were used to save time on modelling and anim
 - Skybox by rpgwhitelock. [AllSky Free - 10 Sky / Skybox Set](https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014)
 
 ## Course Project Report
-The following is the report for the course project. If you need to refresh yourself about assignmnet 1 or want look through the assignment 1 report, go to [Assingnment 1 Report](#assignment-1-report).
+The following is the report for the course project. If you need to refresh yourself about assignment 1 or want look through the assignment 1 report, go to [Assingnment 1 Report](#assignment-1-report).
 
 ### Video Presentation
 
