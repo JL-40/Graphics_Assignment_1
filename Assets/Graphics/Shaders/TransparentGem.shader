@@ -50,11 +50,55 @@ Shader "Sorcery/TransparentGem"
         {
             // Albedo comes from a texture tinted by color
             
-            o.Albedo = _Color.rgb;
+            o.Emission = _Color.rgb;
 
             o.Alpha = _Opacity;
         }
         ENDCG
+
+
+        Pass
+        {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+
+        fixed4 _Color;
+
+        float _Opacity;
+        
+        struct Input
+        {
+            float2 uv_MainTex;
+        };
+
+        //This is excessive.
+        struct appdata
+        {
+            float4 vertex: POSITION;
+            
+        };
+
+        struct v2f
+            {
+                float4 pos : POSITION;
+                
+            };
+
+        v2f vert(appdata v)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                
+                return o;
+            }
+
+        half4 frag(v2f i) : SV_Target
+            {
+                return half4 (_Color.r,_Color.g,_Color.b, _Opacity);
+            }
+        ENDCG
+        }
     }
     FallBack "Diffuse"
 }
