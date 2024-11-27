@@ -80,13 +80,18 @@ In our previous build, the only way to exit the game was to close the build thro
 #### Enemy Models
 We have changed the enemy models from the primiative capsules to [Dog Knights](https://assetstore.unity.com/packages/3d/characters/animals/dog-knight-pbr-polyart-135227) which allowed us to apply our shaders to the enemy and display the full effect of our shaders like our player character does. We also modified the animator so that the animations are similar to the ones used for our player character.
 
+#### Power-up gem
+The power-up gem was not very visable in our previous gem due to the opacity changes. We moved away from a fading gem to have a pulsing gem effect using extrusion to make the gem seem to grow and shrink, which was done by having 2 rendering of the gem; the center gem is of a solid color and is the "main body" for the gem while the extruded rendering has the extrusion value changed over time to make the gem seem to grow and shrink.
+
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_GemImprovementsAid.gif?raw=true)
+
 ### Texturing
 
 
 ### Visual Effects
 #### Particles
 4 particles systems were combined together to create a simple death effect for both the player and enemies. First the sparks from the impact of the metal sword on metal armor was created following the tutorial [EASY EXPLOSIONS in Unity - Particle System vs VFX Graph](https://www.youtube.com/watch?v=adgeiUNlajY) along side the flash particle. After following the sparks and flash particles, the following was changed to create the death VFX:
- - The sparks were given random rotations so that spark generation are not always the same and added 3 sub emitters: metal sharpnel, flash, and bloodsplat.
+ - The sparks were given random rotations so that spark generation are not always the same and added 3 sub emitters: metal shrapnel, flash, and bloodsplat.
  - A copy of sparks was modified to create metal shrapnel effect by creating a new particle material and changing the ```Render Mode``` from ```Stretech Billboard``` to ```Mesh```, as well as, changing the amount of particles and size (including disabling ```Size Over Lifetime```) to fit with the effect.
  - Bloodsplat is a also a copy of sparks with larger emitter radius and different particle material for the red colour and a sub emitter of Blood cloud.
  - Blood cloud was created the same way metal shrapnel was however it used more particles however it keeps the ```Size Over Lifetime``` proptery and the emitter radius is the same size of Bloodsplat. This creates a dense red cloud-like effect that dissipates.
@@ -108,15 +113,10 @@ Scrolling textures was also added to the waves to further increase the realism o
 
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_ScrollingAid.gif?raw=true)
 
-#### Outline
-
+#### Outline/Extrude
+Our characters have a bit of a visibility Issue. We wanted to supplement this, and we felt given the artstyle an outline would work best. We also knew this would be a good chance to improve on our 'dangerous' versus 'not dangerous' states of the characters. Our outline draws a second pass with a color variable a set distance off the mesh. Using our previous scripts, we added a modification to additionally change the outline color when the character is 'dangerous', and return to white when the character is no longer 'dangerous'.
 
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_OutlineAid.png?raw=true)
-
-#### Extrude
-
-
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_GemImprovementsAid.gif?raw=true)
 
 ## Third-Party Resources and Credits - Course Project
 The following third-party resources were added after Assignment 1. The reasoning for the models is the same as assignment 1, we used these assets to save time on modelling and animations and have no impact on the game aside from making the game look more pleasing than looking at primatives. A tutorial was followed for the particle system up but was changed as described in [Particles](#particles) section.
