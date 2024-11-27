@@ -1,7 +1,9 @@
 # Graphics: Course Project
 
 ##  Assignment 1 Report
-The following are part of the report for assignment 1. We left this here as a refresher for marking, as well as, for referencing. For Course Project Report, go to [Course Project Report](#course-project-report).
+The following are part of the report for assignment 1. We left this here as a refresher for marking, as well as, for referencing. 
+
+***<ins>For Course Project Report, go to [Course Project Report](#course-project-report).</ins>***
 
 ### Video Report
 [Comp Graphics Assignment 1 Video Report](https://youtu.be/TryUkKaSO8k)
@@ -71,6 +73,8 @@ The following is the report for the course project. If you need to refresh yours
 
 ### Video Presentation
 
+### Slides
+[INFR 1350U - Intro to Computer Graphics: Assignment 2](https://docs.google.com/presentation/d/18r-wigTjYK7FULCZWv_ocfFUd6Feu4yxFGk7QZALwwo/edit?usp=sharing)
 
 ## Course Project Explanations
 ### Assignment 1 Improvements
