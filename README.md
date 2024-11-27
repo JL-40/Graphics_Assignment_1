@@ -72,6 +72,7 @@ The following third-party resources were used to save time on modelling and anim
 The following is the report for the course project. If you need to refresh yourself about assignment 1 or want look through the assignment 1 report, go to [Assingnment 1 Report](#assignment-1-report).
 
 ### Video Presentation
+[Course Project Video Report](https://youtu.be/c_3CBQ6nVHA)
 
 ### Slides
 [INFR 1350U - Intro to Computer Graphics: Assignment 2](https://docs.google.com/presentation/d/18r-wigTjYK7FULCZWv_ocfFUd6Feu4yxFGk7QZALwwo/edit?usp=sharing)
@@ -144,3 +145,5 @@ Our characters have a bit of a visibility Issue. We wanted to supplement this, a
 The following third-party resources were added after Assignment 1. The reasoning for the models is the same as assignment 1, we used these assets to save time on modelling and animations and have no impact on the game aside from making the game look more pleasing than looking at primatives. A tutorial was followed for the particle system up but was changed as described in [Particles](#particles) section.
 - New enemy model and animations by Dungeon Mason. [Dog Knight PBR Polyart](https://assetstore.unity.com/packages/3d/characters/animals/dog-knight-pbr-polyart-135227)
 - Particle system tutorial by [Gabriel Aguiar Prod.](https://www.youtube.com/@GabrielAguiarProd) was used to create the sparks of the particle system. Video found here: [EASY EXPLOSIONS in Unity - Particle System vs VFX Graph](https://www.youtube.com/watch?v=adgeiUNlajY)
+- Water Base Color Texture Map and Greyscale -Course Content Files.
+- Generative AI used to aid in transparency application in fragment shader (Water Foam ) (1 line of code)
