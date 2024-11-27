@@ -82,8 +82,8 @@ Material:
     - _Parallax: 0.02
     - _PointX: 0
     - _PointY: 0
-    - _ScrollX: -2
-    - _ScrollY: 1
+    - _ScrollX: -0.6
+    - _ScrollY: 0.3
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _Speed: 3
