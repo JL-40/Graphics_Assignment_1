@@ -27,7 +27,7 @@ The gif below shows the player and enemy gaining the buff while also showing the
 
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Assignment_1/Player_VS_Enemy.gif?raw=true)
 
-### Illuminatioin
+### Illumination
 #### Diffuse Lighting, Diffuse Lighting with Ambient, and Simple Specular
 I have combined these three together since they are part of a single shaderlab script. The overall code has not changed from the slide code when seperated from each other, however, we had to add some modifications to get these three implementations to work together and work with the following deliverable, toggling. First of all we added toggled for both ambient and specular so that we can isolate each for the toggling portion, as well as, code to handle rendering for having both, one or the other, or neither ambient or specular enabled and we used Diffuse lighting to combine them all together. During this process we also merged the shaders together for this function to work.
 
@@ -95,6 +95,8 @@ Almost everything is now textured!
 
 Textures are implemented alongside a 'bool' that enables or disabled use of textures. When not enabled, a flat color is applied to the albedo instead.
 NOTE: Due to lack of relevance, no texture is applied to the gems.
+
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_TextureTogglesAid.gif?raw=true)
 
 ### Visual Effects
 #### Particles
