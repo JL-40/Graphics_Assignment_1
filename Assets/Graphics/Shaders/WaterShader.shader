@@ -2,10 +2,10 @@ Shader "Sorcery/WaveFromOriginPoint"
 {
     Properties
     {
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        _FoamTex ("Albedo (RGB)", 2D) = "white" {}
+        _MainTex ("Water Texture", 2D) = "white" {}
+        _FoamTex ("Foam Texture", 2D) = "white" {}
         [MaterialToggle] _UseTexture ("UseTexture", float) = 0
-        _FoamColor ("colorFoam", Color) = (0,0,0,1) 
+        _FoamColor ("Foam Color", Color) = (0,0,0,1) 
         _FoamMag ("Foam Height", Range(-0.1,0.1)) = 0
         _FoamOpac ("Foam Threshold", Range(0,1)) = 0
 
