@@ -96,6 +96,8 @@ This particle system enhanced our previous version by creating a clearer and mor
 #### Stencil
 In our previous version, we experienced concerns that the powerup gems could spawn behind our props. To remedy this, we wanted to make a stencil modification that would allow you to see behind the props if you hovered over them. In the scene, a sphere with a Stencil front is rendered invisibly and its position is updated via raycast to the cursor position each frame-tick via script. Our props have a modified but similar shader to the ground, adding the Stencil back functionality.
 
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Player_VS_Enemy.gif?raw=true)
+
 #### Wave
 In our assignment 1, the surrounding area around our play area was just a void that didn't even show the skybox which created a disconnect with the player and looks awful. We added water in the form of waves that surround the play area which makes it look like the area is an island surrounded by an ocean; the waves have been modified from the lecture slides to be radial instead of linear, making the waves more realistic to how waves would act around an island and fills the void that was previously there. 
 
