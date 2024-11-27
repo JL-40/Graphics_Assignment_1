@@ -10,7 +10,6 @@ Shader "Sorcery/ToonShade1"
     }
     SubShader
     {
-        
 
         CGPROGRAM
         #pragma surface surf ToonRamp
