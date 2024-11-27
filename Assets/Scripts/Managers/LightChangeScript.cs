@@ -13,6 +13,8 @@ public class LightChangeScript : MonoBehaviour
 
     public List<Renderer> Enemies;
 
+    public Renderer water;
+
     public Transform TileOwner;
 
 
@@ -142,6 +144,16 @@ public class LightChangeScript : MonoBehaviour
                     ren.material.SetFloat("_UseTexture", 1.0f);
                 }
             }
+
+            if (Textured)
+            {
+                water.material.SetFloat("_UseTexture", 0.0f);
+            }
+            else
+            {
+                water.material.SetFloat("_UseTexture", 1.0f);
+            }
+            
 
 
 
