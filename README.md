@@ -100,7 +100,7 @@ In our previous version, we experienced concerns that the powerup gems could spa
 In our assignment 1, the surrounding area around our play area was just a void that didn't even show the skybox which created a disconnect with the player and looks awful. We added water in the form of waves that surround the play area which makes it look like the area is an island surrounded by an ocean; the waves have been modified from the lecture slides to be radial instead of linear, making the waves more realistic to how waves would act around an island and fills the void that was previously there. 
 
 #### Scrolling texture
-Scrolling textures was also added to the waves to further increase the realism of the waves, making the water seem to move around.
+Scrolling textures was also added to the waves to further increase the realism of the waves, making the water seem to move around. Additionally, we added a sea foam texture that is layered ontop of the waves that scrolls at a different speed which further increases the realism of the water texture.
 
 #### Outline/Extrude
 
