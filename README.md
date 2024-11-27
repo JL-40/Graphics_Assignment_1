@@ -86,7 +86,15 @@ The power-up gem was not very visable in our previous gem due to the opacity cha
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_GemImprovementsAid.gif?raw=true)
 
 ### Texturing
+Almost everything is now textured!
+ - Textures have been added to:
+ - Enemies
+ - Props (Tower,Bush,Tree)
+ - Ground
+ - Waves
 
+Textures are implemented alongside a 'bool' that enables or disabled use of textures. When not enabled, a flat color is applied to the albedo instead.
+NOTE: Due to lack of relevance, no texture is applied to the gems.
 
 ### Visual Effects
 #### Particles
