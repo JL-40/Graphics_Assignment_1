@@ -49,13 +49,8 @@ Shader "Sorcery/MainShadeWorldStencilBack"{
             uniform sampler2D _MainTex;
 
 
-
             // unity defined variables
             uniform float4 _LightColor0;
-
-
-            
-
 
 
             struct Input {
@@ -79,10 +74,6 @@ Shader "Sorcery/MainShadeWorldStencilBack"{
                 float4 col: COLOR;
                 float2 uv: TEXCOORD2;
             };
-
-
-
-
 
 
             // vertex functions
@@ -177,18 +168,8 @@ Shader "Sorcery/MainShadeWorldStencilBack"{
                 }
                
                 return float4(lightFinal, 1.0) * textureColor;
-                
-
 
             }
-
-
-           
-
-
-
-
-
 
             ENDCG
     }

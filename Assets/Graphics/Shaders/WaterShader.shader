@@ -2,9 +2,9 @@ Shader "Sorcery/WaveFromOriginPoint"
 {
     Properties
     {
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
-        _FoamTex ("Albedo (RGB)", 2D) = "white" {}
-        _FoamColor ("colorFoam", Color) = (0,0,0,1) 
+        _MainTex ("Water Texture", 2D) = "white" {}
+        _FoamTex ("Foam Texture", 2D) = "white" {}
+        _FoamColor ("Foam Color", Color) = (0,0,0,1) 
         _FoamMag ("Foam Height", Range(-0.1,0.1)) = 0
         _FoamOpac ("Foam Threshold", Range(0,1)) = 0
 
@@ -15,7 +15,7 @@ Shader "Sorcery/WaveFromOriginPoint"
         
         _Amplitude ("Amplitude", float) = 0.5
         _Frequency ("Frequency", float) = 1.0
-        _Speed ("Speed", float) = 1.0
+        _Speed ("Scrolling Speed", float) = 1.0
 
         _ScrollX ("ScrollX", Range(-5,5)) = 1
         _ScrollY ("ScrollY", Range(-5,5)) = 1

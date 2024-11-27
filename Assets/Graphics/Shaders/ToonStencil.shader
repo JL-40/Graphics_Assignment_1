@@ -1,4 +1,4 @@
-Shader "Sorcery/ToonShade2"
+Shader "Sorcery/ToonShadeStencil"
 {
     Properties
     {

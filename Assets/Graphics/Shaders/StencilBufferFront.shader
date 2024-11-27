@@ -3,7 +3,7 @@ Shader "Sorcery/StencilBufferFront"
     Properties
     {
         
-        _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _MainTex ("Stencil Texture", 2D) = "white" {}
         
     }
     SubShader

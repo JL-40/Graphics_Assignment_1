@@ -57,6 +57,7 @@ Shader "TintRimShader"
         {
             Cull Front
 
+            // Create Outline
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag

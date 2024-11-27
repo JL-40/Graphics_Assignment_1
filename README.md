@@ -82,6 +82,7 @@ We have changed the enemy models from the primiative capsules to [Dog Knights](h
 
 ### Texturing
 
+
 ### Visual Effects
 #### Particles
 4 particles systems were combined together to create a simple death effect for both the player and enemies. First the sparks from the impact of the metal sword on metal armor was created following the tutorial [EASY EXPLOSIONS in Unity - Particle System vs VFX Graph](https://www.youtube.com/watch?v=adgeiUNlajY) along side the flash particle. After following the sparks and flash particles, the following was changed to create the death VFX:
@@ -91,6 +92,18 @@ We have changed the enemy models from the primiative capsules to [Dog Knights](h
  - Blood cloud was created the same way metal shrapnel was however it used more particles however it keeps the ```Size Over Lifetime``` proptery and the emitter radius is the same size of Bloodsplat. This creates a dense red cloud-like effect that dissipates.
 
 This particle system enhanced our previous version by creating a clearer and more noticable feedback of defeating an enemy or dying. The sparks and flash is a logical VFX for the metal sword hitting metal armour, the metal shrapnel comes from the impact of the powered up character (enemy or player) attacking, and the bloodsplat and blood cloud shows the power the power-ups give to the character. 
+
+#### Stencil
+In our previous version, we experienced concerns that the powerup gems could spawn behind our props. To remedy this, we wanted to make a stencil modification that would allow you to see behind the props if you hovered over them. In the scene, a sphere with a Stencil front is rendered invisibly and its position is updated via raycast to the cursor position each frame-tick via script. Our props have a modified but similar shader to the ground, adding the Stencil back functionality.
+
+#### Wave
+In our assignment 1, the surrounding area around our play area was just a void that didn't even show the skybox which created a disconnect with the player and looks awful. We added water in the form of waves that surround the play area which makes it look like the area is an island surrounded by an ocean; the waves have been modified from the lecture slides to be radial instead of linear, making the waves more realistic to how waves would act around an island and fills the void that was previously there. 
+
+#### Scrolling texture
+Scrolling textures was also added to the waves to further increase the realism of the waves, making the water seem to move around.
+
+#### Outline/Extrude
+
 
 ## Third-Party Resources and Credits - Course Project
 The following third-party resources were added after Assignment 1. The reasoning for the models is the same as assignment 1, we used these assets to save time on modelling and animations and have no impact on the game aside from making the game look more pleasing than looking at primatives. A tutorial was followed for the particle system up but was changed as described in [Particles](#particles) section.
