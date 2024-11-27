@@ -23,6 +23,8 @@ Shader "TintRimShaderToon"
 
         SubShader{
             Tags { "RenderType" = "Opaque" }
+
+            // Toonshading
             CGPROGRAM
                 #pragma surface surf ToonRamp finalcolor:mycolor 
    
@@ -66,7 +68,7 @@ Shader "TintRimShaderToon"
         sampler2D _MainTex;
         void surf(Input IN, inout SurfaceOutput o) {
             if (_UseTexture)
-            o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb;
+            o.Albedo = tex2D(_MainTex, IN.uv_MainTex).rgb; // Apply texture
             else
             o.Albedo = _ColorMain;
             //	half rim = dot(normalize(IN.viewDir), o.Normal);
@@ -74,11 +76,11 @@ Shader "TintRimShaderToon"
             //o.Emission = _RimColor.rgb * rim;
             if (_doFlash)
             {
-            o.Emission = _RimColor.rgb * pow (rim, _RimPower * sin(_Time.z * 10));
+            o.Emission = _RimColor.rgb * pow (rim, _RimPower * sin(_Time.z * 10)); // Change the rim power over time to create flashing effect
             }
             else
             {
-            o.Emission = _RimColor.rgb * pow(rim, _RimPower);
+            o.Emission = _RimColor.rgb * pow(rim, _RimPower); // Constant rim power
             }
         }
         ENDCG
@@ -87,6 +89,7 @@ Shader "TintRimShaderToon"
         {
             Cull Front
 
+            // Outline on power up
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
