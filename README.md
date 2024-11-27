@@ -108,9 +108,12 @@ Scrolling textures was also added to the waves to further increase the realism o
 
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_ScrollingAid.gif?raw=true)
 
-#### Outline/Extrude
+#### Outline
+
 
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_OutlineAid.png?raw=true)
+
+#### Extrude
 
 
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_GemImprovementsAid.gif?raw=true)
