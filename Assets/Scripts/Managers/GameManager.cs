@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        if (pauseText.gameObject.activeSelf == false)
+        if (pauseText.gameObject.activeSelf == false && score == 4)
         {
             pauseText.gameObject.SetActive(true);
         }
