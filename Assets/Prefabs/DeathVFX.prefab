@@ -14671,7 +14671,7 @@ GameObject:
   - component: {fileID: 7224754948893938342}
   - component: {fileID: 7851100995937312908}
   m_Layer: 0
-  m_Name: MetalSharpnel
+  m_Name: MetalShrapnel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19552,7 +19552,7 @@ GameObject:
   - component: {fileID: 5934439845281566466}
   - component: {fileID: 2742160001857201109}
   m_Layer: 0
-  m_Name: Death
+  m_Name: DeathVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
