@@ -81,6 +81,9 @@ The following is the report for the course project. If you need to refresh yours
 #### Gameplay
 In our previous build, the only way to exit the game was to close the build through ```ALT + F4``` or through the ```Task Manager```. Now we have a dedicated button to quit the game at any time, which is more convenient for the user. We also made the game pause when the player wins or dies, which gives the user a better idea of when the game is over especially when the player wins as in Assignment 1, the player will continue to over around which may be confusing. As part of testing our project, we added a button that will unpause the game if the user wants to see the effects on our player and a restart button for if the user wants to play again.
 
+We also changed the angle of the camera to see the shader better and updated the game's looks by adding textures to the play area.
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/UpdatedVisualScene.png?raw=true)
+
 #### Enemy Models
 We have changed the enemy models from the primiative capsules to [Dog Knights](https://assetstore.unity.com/packages/3d/characters/animals/dog-knight-pbr-polyart-135227) which allowed us to apply our shaders to the enemy and display the full effect of our shaders like our player character does. We also modified the animator so that the animations are similar to the ones used for our player character.
 
