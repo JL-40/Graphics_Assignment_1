@@ -71,6 +71,8 @@ The following is the report for the course project. If you need to refresh yours
 
 ### Video Presentation
 
+### Slides
+https://docs.google.com/presentation/d/18r-wigTjYK7FULCZWv_ocfFUd6Feu4yxFGk7QZALwwo/edit?usp=sharing
 
 ## Course Project Explanations
 ### Assignment 1 Improvements
