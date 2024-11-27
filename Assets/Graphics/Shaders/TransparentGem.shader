@@ -59,6 +59,8 @@ Shader "Sorcery/TransparentGem"
 
         Pass
         {
+            Tags { "Queue" = "Transparent" }
+
         CGPROGRAM
         #pragma vertex vert
         #pragma fragment frag
