@@ -116,7 +116,9 @@ NOTE: Due to lack of relevance, no texture is applied to the gems.
  - Bloodsplat is a also a copy of sparks with larger emitter radius and different particle material for the red colour and a sub emitter of Blood cloud.
  - Blood cloud was created the same way metal shrapnel was however it used more particles however it keeps the ```Size Over Lifetime``` proptery and the emitter radius is the same size of Bloodsplat. This creates a dense red cloud-like effect that dissipates.
 
-This particle system enhanced our previous version by creating a clearer and more noticable feedback of defeating an enemy or dying. The sparks and flash is a logical VFX for the metal sword hitting metal armour, the metal shrapnel comes from the impact of the powered up character (enemy or player) attacking, and the bloodsplat and blood cloud shows the power the power-ups give to the character. 
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/DeathParticles.gif?raw=true)
+
+This particle system enhanced our previous version by creating a clearer and more noticable feedback of defeating an enemy or dying. The sparks and flash is a logical VFX for the metal sword hitting metal armour, the metal shrapnel comes from the impact of the powered up character (enemy or player) attacking, and the bloodsplat and blood cloud shows the power the power-ups give to the character.
 
 #### Stencil
 In our previous version, we experienced concerns that the powerup gems could spawn behind our props. To remedy this, we wanted to make a stencil modification that would allow you to see behind the props if you hovered over them. In the scene, a sphere with a Stencil front is rendered invisibly and its position is updated via raycast to the cursor position each frame-tick via script. Our props have a modified but similar shader to the ground, adding the Stencil back functionality.
