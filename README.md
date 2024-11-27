@@ -74,11 +74,25 @@ The following is the report for the course project. If you need to refresh yours
 
 ## Course Project Explanations
 ### Assignment 1 Improvements
+#### Gameplay
+In our previous build, the only way to exit the game was to close the build through ```ALT + F4``` or through the ```Task Manager```. Now we have a dedicated button to quit the game at any time, which is more convenient for the user. We also made the game pause when the player wins or dies, which gives the user a better idea of when the game is over especially when the player wins as in Assignment 1, the player will continue to over around which may be confusing. As part of testing our project, we added a button that will unpause the game if the user wants to see the effects on our player and a restart button for if the user wants to play again.
+
+#### Enemy Models
+We have changed the enemy models from the primiative capsules to [Dog Knights](https://assetstore.unity.com/packages/3d/characters/animals/dog-knight-pbr-polyart-135227) which allowed us to apply our shaders to the enemy and display the full effect of our shaders like our player character does. We also modified the animator so that the animations are similar to the ones used for our player character.
 
 ### Texturing
 
 ### Visual Effects
+#### Particles
+4 particles systems were combined together to create a simple death effect for both the player and enemies. First the sparks from the impact of the metal sword on metal armor was created following the tutorial [EASY EXPLOSIONS in Unity - Particle System vs VFX Graph](https://www.youtube.com/watch?v=adgeiUNlajY) along side the flash particle. After following the sparks and flash particles, the following was changed to create the death VFX:
+ - The sparks were given random rotations so that spark generation are not always the same and added 3 sub emitters: metal sharpnel, flash, and bloodsplat.
+ - A copy of sparks was modified to create metal shrapnel effect by creating a new particle material and changing the ```Render Mode``` from ```Stretech Billboard``` to ```Mesh```, as well as, changing the amount of particles and size (including disabling ```Size Over Lifetime```) to fit with the effect.
+ - Bloodsplat is a also a copy of sparks with larger emitter radius and different particle material for the red colour and a sub emitter of Blood cloud.
+ - Blood cloud was created the same way metal shrapnel was however it used more particles however it keeps the ```Size Over Lifetime``` proptery and the emitter radius is the same size of Bloodsplat. This creates a dense red cloud-like effect that dissipates.
+
+This particle system enhanced our previous version by creating a clearer and more noticable feedback of defeating an enemy or dying. The sparks and flash is a logical VFX for the metal sword hitting metal armour, the metal shrapnel comes from the impact of the powered up character (enemy or player) attacking, and the bloodsplat and blood cloud shows the power the power-ups give to the character. 
 
 ## Third-Party Resources and Credits - Course Project
-The following third-party resources were added after Assignment 1. The reasoning is the same as assignment 1, we used these assets to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives.
+The following third-party resources were added after Assignment 1. The reasoning for the models is the same as assignment 1, we used these assets to save time on modelling and animations and have no impact on the game aside from making the game look more pleasing than looking at primatives. A tutorial was followed for the particle system up but was changed as described in [Particles](#particles) section.
 - New enemy model and animations by Dungeon Mason. [Dog Knight PBR Polyart](https://assetstore.unity.com/packages/3d/characters/animals/dog-knight-pbr-polyart-135227)
+- Particle system tutorial by [Gabriel Aguiar Prod.](https://www.youtube.com/@GabrielAguiarProd) was used to create the sparks of the particle system. Video found here: [EASY EXPLOSIONS in Unity - Particle System vs VFX Graph](https://www.youtube.com/watch?v=adgeiUNlajY)
