@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
@@ -20,10 +21,15 @@ public class PlayerUnitBehaviour : MonoBehaviour
     public Renderer shield;
     public Renderer sword;
 
+
+    public Transform stencilSphere;
+
+    int layerMask;
+
     void Start()
     {
         m_Agent = GetComponent<NavMeshAgent>();
-        
+        layerMask = LayerMask.GetMask("Noraycasts");
         Debug.Log("Test");
     }
 
@@ -33,6 +39,8 @@ public class PlayerUnitBehaviour : MonoBehaviour
         PickTarget();
 
         DangerousTick();
+
+        PlaceStencil();
     }
 
     void PickTarget()
@@ -40,9 +48,21 @@ public class PlayerUnitBehaviour : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !Input.GetKey(KeyCode.LeftShift))
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray.origin, ray.direction, out m_HitInfo))
+            //if (Physics.Raycast(ray.origin, ray.direction, out m_HitInfo, ~layerMask))
+            //    m_Agent.destination = m_HitInfo.point;
+            if (Physics.Raycast(ray, out m_HitInfo, Mathf.Infinity, ~layerMask))
                 m_Agent.destination = m_HitInfo.point;
         }
+    }
+
+    void PlaceStencil()
+    {
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red, 1f); // Visualize the ray
+        //if (Physics.Raycast(ray.origin, ray.direction, out m_HitInfo, ~layerMask))
+        //    stencilSphere.position = m_HitInfo.point;
+        if (Physics.Raycast(ray, out m_HitInfo, Mathf.Infinity, ~layerMask))
+            stencilSphere.position = m_HitInfo.point;
     }
 
     void DangerousTick()
