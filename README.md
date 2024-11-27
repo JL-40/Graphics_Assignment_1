@@ -99,13 +99,21 @@ In our previous version, we experienced concerns that the powerup gems could spa
 ![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_StencilAid.gif?raw=true)
 
 #### Wave
-In our assignment 1, the surrounding area around our play area was just a void that didn't even show the skybox which created a disconnect with the player and looks awful. We added water in the form of waves that surround the play area which makes it look like the area is an island surrounded by an ocean; the waves have been modified from the lecture slides to be radial instead of linear, making the waves more realistic to how waves would act around an island and fills the void that was previously there. 
+In our previous version, you could see the skybox from below due to the lack of screen coverage. We decided to recontextualize our scene to be a proper island, and so we implemented waves. Our islands is circular (vaguely), and we found the waves moving linearly to be insufficient, so the wave shader has been modified to define a point on itself, and the waves collapse inward onto that location. For example, inputting 0 and 0 causes the waves to radially crash inwards towards our island. Amplitude, frequency, and speed are calculated traditionally.
+
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_WavesAid.gif?raw=true)
 
 #### Scrolling texture
 Scrolling textures was also added to the waves to further increase the realism of the waves, making the water seem to move around. Additionally, we added a sea foam texture that is layered ontop of the waves that scrolls at a different speed which further increases the realism of the water texture.
 
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_ScrollingAid.gif?raw=true)
+
 #### Outline/Extrude
 
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_OutlineAid.png?raw=true)
+
+
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_GemImprovementsAid.gif?raw=true)
 
 ## Third-Party Resources and Credits - Course Project
 The following third-party resources were added after Assignment 1. The reasoning for the models is the same as assignment 1, we used these assets to save time on modelling and animations and have no impact on the game aside from making the game look more pleasing than looking at primatives. A tutorial was followed for the particle system up but was changed as described in [Particles](#particles) section.
