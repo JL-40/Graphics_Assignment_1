@@ -13,7 +13,7 @@ The following are part of the report for assignment 1. We left this here as a re
 The game is a top-down, point-and-click style game that takes minor inspiration from pac-man. There are four enemies that the player must defeat to win, both enemies and the player can only defeat each other by obtaining powerups in the form of powerup crystals that will randomly spawn. Once these powerups are obtained, the player or enemies must hunt the other to defeat them, winning the game when the player dies or all the enemies die.
 
 The screenshot below shows the gameplay mid-progress.
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Gameplay_Screenshot.jpg?raw=true)
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Assignment_1/Gameplay_Screenshot.jpg?raw=true)
 
 #### Crystal Powerups
 The crystal powerups are split into two parts, the spawning of them and the interaction of them. The spawner simply creates a new crystal witin a set bound (hard coded) at set intervals. After the crystals are spawned, the crystal will modify its transparency to make it seem to fade in and out. Additionally, when the player or enemy interacts with the crystal (collides with it), it will delete itself and set the player or enemy to dangerous.
@@ -25,7 +25,7 @@ When both the player and the enemy AI must move to the crystal to gain a buff th
 
 The gif below shows the player and enemy gaining the buff while also showing the player defeating the enemy before dying.
 
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Player_VS_Enemy.gif?raw=true)
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Assignment_1/Player_VS_Enemy.gif?raw=true)
 
 ### Illuminatioin
 #### Diffuse Lighting, Diffuse Lighting with Ambient, and Simple Specular
@@ -50,13 +50,13 @@ The rim lighting, as mentioned in the [Base Game](#Base-Game) section, the rim l
 
 The screenshot below shows the rim lighting with the texture applied to the player character from [RPG Hero PBR HP Polyart](#Third-Party-Resources-and-Credits).
 
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Rim_Lighting.gif?raw=true)
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Assignment_1/Rim_Lighting.gif?raw=true)
 
 #### Tranparency
 The crystal modified its own transpaency by setting the value of its shader variable to the C# variable call ```Opacity```. By modifying the shader variable directly, we can dynamically change the transparency of the crystal, which creates a fade-in-fade-out effect that makes the crystal a bit more noticable and also plays with the psychology of the player as we have been conditioned to understand that a blinking object is important, either as part of the game or as a visual indicator of the object potentially disappearing.
 
 The gif below shows the crystal dynamically adjusting their tranparency of their material shader.
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Transparent_Crystal.gif?raw=true)
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Assignment_1/Transparent_Crystal.gif?raw=true)
 
 ## Third-Party Resources and Credits - Assignment 1
 The following third-party resources were used to save time on modelling and animations. These have no impact on the game aside from making the game look more pleasing than looking at primatives or looking at a flat color skybox.
@@ -96,7 +96,7 @@ This particle system enhanced our previous version by creating a clearer and mor
 #### Stencil
 In our previous version, we experienced concerns that the powerup gems could spawn behind our props. To remedy this, we wanted to make a stencil modification that would allow you to see behind the props if you hovered over them. In the scene, a sphere with a Stencil front is rendered invisibly and its position is updated via raycast to the cursor position each frame-tick via script. Our props have a modified but similar shader to the ground, adding the Stencil back functionality.
 
-![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Player_VS_Enemy.gif?raw=true)
+![alt text](https://github.com/JL-40/Graphics_Assignment_1/blob/main/ReportImages/Course_Project/Graphics_StencilAid.gif?raw=true)
 
 #### Wave
 In our assignment 1, the surrounding area around our play area was just a void that didn't even show the skybox which created a disconnect with the player and looks awful. We added water in the form of waves that surround the play area which makes it look like the area is an island surrounded by an ocean; the waves have been modified from the lecture slides to be radial instead of linear, making the waves more realistic to how waves would act around an island and fills the void that was previously there. 
